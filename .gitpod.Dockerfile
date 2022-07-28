@@ -6,8 +6,7 @@ USER gitpod
 
 RUN echo '. /home/gitpod/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true' >> /home/gitpod/.bashrc
 RUN opam init -y
-RUN cd /workspace/gitpod-template-ocaml
-RUN eval $(opam env) && opam switch create . 4.14.0
+RUN eval $(opam env) && opam switch create 4.14.0
 RUN eval $(opam env) && opam update
 
 # Install dev toolings
